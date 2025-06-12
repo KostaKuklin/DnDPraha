@@ -132,9 +132,9 @@ body {
 
 /* Main content */
 .main-content {
-    margin-top: 180px;
-    padding: 3rem;
-    min-height: calc(100vh - 180px);
+    margin-top: 120px;
+    padding: 2rem;
+    min-height: calc(100vh - 120px);
     position: relative;
     z-index: 2;
 }
@@ -150,18 +150,7 @@ body {
 /* Landing page */
 .hero-section {
     text-align: center;
-    padding: 4rem 0;
-}
-
-.hero-title {
-    font-size: 8rem;
-    font-weight: 900;
-    margin-bottom: 3rem;
-    margin-top: 2rem;
-    color: #ffffff;
-    text-transform: uppercase;
-    letter-spacing: -0.05em;
-    line-height: 0.9;
+    padding: 2rem 0;
 }
 
 .next-session-card {
@@ -635,8 +624,8 @@ body {
         font-size: 0.8rem;
     }
     
-    .hero-title {
-        font-size: 4rem;
+    .hero-section {
+        padding: 2rem;
     }
     
     .countdown {
@@ -664,19 +653,6 @@ body {
     .main-content {
         padding: 2rem;
     }
-}
-
-/* Page titles */
-h1 {
-    text-align: center;
-    color: #ffffff;
-    margin-top: 2rem;
-    margin-bottom: 3rem;
-    font-size: 6rem;
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: -0.05em;
-    line-height: 0.9;
 }
 
 /* Scrollbar styling */
