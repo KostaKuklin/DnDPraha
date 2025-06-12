@@ -1,141 +1,143 @@
-# D&D Campaign Manager
+# D&D Praha Campaign Manager
 
-A lightweight web application for managing your Dungeons & Dragons campaign with a beautiful, modern interface and smooth animations.
+A static web application for managing D&D campaign information, built with HTML, CSS, and JavaScript. This application works perfectly on GitHub Pages and provides a beautiful, responsive interface for campaign management.
 
 ## Features
 
-### 🏠 Landing Page
-- **Next Session Countdown**: Displays the date and time of your next session with a live countdown timer
-- **Animated Hero Section**: Eye-catching title with glowing effects
-- **Responsive Design**: Works perfectly on desktop and mobile devices
+- **Static Website**: No server required - works directly on GitHub Pages
+- **Responsive Design**: Brutalist aesthetic with modern UX principles
+- **Campaign Management**: 
+  - NPC tracking and details
+  - Rules reference with filtering
+  - Interactive campaign map
+  - Party member management
+  - Session countdown timer
+- **Admin Features**: 
+  - Login system (admin/admin, user1/userpass)
+  - Edit functionality for all data (temporary in static version)
+  - Add/delete capabilities
 
-### 👥 NPCs Page
-- **NPC Gallery**: Grid layout showing all NPCs your party has encountered
-- **Detailed Information**: Click any NPC to see their full details in a modal
-- **Rich Descriptions**: Each NPC includes role, location, and backstory
-- **Sample Data**: Includes 4 example NPCs to get you started
+## Pages
 
-### 📖 Rules Page
-- **Categorized Rules**: Rules are tagged for easy filtering
-- **Filter System**: Filter by movement, combat, spell, conditions, saving throws, or spellcasting
-- **Quick Reference**: Essential D&D 5e rules for players
-- **Smooth Animations**: Cards slide in with beautiful transitions
+1. **Home**: Session countdown and overview
+2. **NPCs**: Character database with images and details
+3. **Rules**: Searchable rules reference with tags
+4. **Map**: Interactive campaign map
+5. **Party**: Player character management
 
-### 🗺️ Map Page
-- **Embedded Faerun Map**: Direct integration with [LoreMaps Faerun](https://loremaps.azurewebsites.net/Maps/Faerun)
-- **Full-Screen View**: Responsive iframe that adapts to screen size
-- **Campaign Setting**: Perfect for Forgotten Realms campaigns
+## Data Files
 
-### ⚔️ Party Page
-- **Character Cards**: Visual representation of each party member
-- **Detailed Profiles**: Click to see spells, abilities, and magical items
-- **Player Information**: Track both player and character names
-- **Level Tracking**: Current character levels displayed prominently
+The application loads data from static JSON files:
+- `npcs.json` - Non-player character data
+- `rules.json` - Game rules and mechanics
+- `party.json` - Player character information
+- `session_info.json` - Next session date and time
+- `users.json` - User authentication data
 
-## Customization Guide
+## Setup
 
-### Setting Your Next Session
-Edit the `script.js` file and update line 35:
-```javascript
-const nextSession = new Date('2024-01-15T19:00:00'); // Update this with your actual session time
-```
+### Local Development
 
-### Adding NPCs
-In `script.js`, find the `npcsData` array and add new NPCs:
-```javascript
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/KostaKuklin/DnDPraha.git
+   cd DnDPraha
+   ```
+
+2. Open `index.html` in your web browser or use a local server:
+   ```bash
+   # Using Python
+   python -m http.server 8000
+   
+   # Using Node.js
+   npx serve .
+   ```
+
+3. Visit `http://localhost:8000` in your browser
+
+### GitHub Pages Deployment
+
+The site is automatically deployed to GitHub Pages at:
+**https://kostakuklin.github.io/DnDPraha/**
+
+## Usage
+
+### For Players
+- Browse NPCs, rules, and party information
+- View the campaign map
+- Check session countdown
+
+### For Admins
+- Login with `admin/admin`
+- Edit session information
+- Add/edit/delete NPCs, rules, and party members
+- Note: Changes are temporary in the static version
+
+## Technical Details
+
+- **Frontend**: HTML5, CSS3, Vanilla JavaScript
+- **Styling**: Custom CSS with brutalist design principles
+- **Data**: Static JSON files
+- **Deployment**: GitHub Pages
+- **Font**: Inter (Google Fonts)
+
+## Customization
+
+### Adding New NPCs
+Edit `npcs.json` to add new characters:
+```json
 {
-    id: 5,
-    name: "Your NPC Name",
-    description: "Description of the NPC",
-    image: "URL to NPC image",
-    role: "NPC Role",
-    location: "Where they can be found"
+  "id": 5,
+  "name": "New Character",
+  "description": "Character description",
+  "image": "image_url",
+  "role": "Character role",
+  "location": "Character location"
 }
 ```
 
-### Adding Party Members
-In `script.js`, find the `partyData` array and add new characters:
-```javascript
+### Adding New Rules
+Edit `rules.json` to add new rules:
+```json
 {
-    id: 5,
-    playerName: "Player Name",
-    characterName: "Character Name",
-    class: "Character Class",
-    level: 5,
-    portrait: "URL to character portrait",
-    spells: ["Spell 1", "Spell 2", "Spell 3"],
-    magicalItems: ["Item 1", "Item 2", "Item 3"]
+  "title": "New Rule",
+  "content": "Rule description",
+  "tags": ["tag1", "tag2"]
 }
 ```
 
-### Adding Rules
-In `script.js`, find the `rulesData` array and add new rules:
-```javascript
+### Updating Session Info
+Edit `session_info.json`:
+```json
 {
-    title: "Rule Title",
-    content: "Rule description and details",
-    tags: ["tag1", "tag2"] // Use existing tags: movement, combat, spell, conditions, saving-throws, spellcasting
+  "date": "DD.MM.YYYY",
+  "time": "HH:MM"
 }
 ```
-
-### Changing the Map
-To use a different map, update the iframe src in `index.html`:
-```html
-<iframe src="YOUR_MAP_URL" width="100%" height="600" frameborder="0" title="Your Map"></iframe>
-```
-
-## Styling Customization
-
-### Color Scheme
-The app uses a dark theme with gold accents. To change colors, edit `styles.css`:
-- **Primary Gold**: `#ffd700` (used for highlights and borders)
-- **Background**: Dark gradient from `#1a1a2e` to `#0f3460`
-- **Text**: `#e8e8e8` for main text, `#ccc` for secondary text
-
-### Animations
-All animations are CSS-based for smooth performance:
-- **Fade In**: Elements appear with opacity transitions
-- **Slide Up**: Cards slide up from below
-- **Glow Effects**: Text and borders have subtle glow animations
-- **Hover Effects**: Interactive elements respond to mouse hover
 
 ## Browser Compatibility
 
-- ✅ Chrome (recommended)
-- ✅ Firefox
-- ✅ Safari
-- ✅ Edge
-- ✅ Mobile browsers
+- Chrome (recommended)
+- Firefox
+- Safari
+- Edge
 
-## File Structure
+## Contributing
 
-```
-DNDApp/
-├── index.html      # Main HTML structure
-├── styles.css      # All styling and animations
-├── script.js       # JavaScript functionality
-└── README.md       # This file
-```
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Test locally
+5. Submit a pull request
 
-## Getting Started
+## License
 
-1. **Open the app**: Double-click `index.html` or open it in your web browser
-2. **Customize the data**: Edit `script.js` to add your campaign information
-3. **Update session time**: Set your next session date and time
-4. **Add your content**: Replace sample data with your actual campaign details
+This project is open source and available under the MIT License.
 
-## Tips for Best Experience
+## Support
 
-- **Images**: Use high-quality images for NPCs and character portraits
-- **Session Updates**: Remember to update the session time before each game
-- **Regular Updates**: Keep NPC and party information current
-- **Mobile Use**: The app works great on tablets and phones for in-game reference
+For issues or questions, please create an issue on the GitHub repository.
 
-## Technical Notes
+---
 
-- **No Dependencies**: Pure HTML, CSS, and JavaScript - no frameworks required
-- **Lightweight**: Fast loading and smooth performance
-- **Offline Capable**: Works without internet (except for the map)
-- **Responsive**: Adapts to any screen size automatically
-
-Enjoy your D&D campaign! 🎲⚔️🐉 
+**Note**: This is a static website version. For full CRUD functionality with persistent data storage, consider deploying the Flask backend version to a platform like Heroku or Railway. 
