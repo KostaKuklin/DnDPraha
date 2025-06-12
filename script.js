@@ -282,19 +282,12 @@ function showPartyDetails(member) {
     content.innerHTML = `
         <h2>${member.characterName}</h2>
         <img src="${member.portrait}" alt="${member.characterName}" style="width: 100px; height: 100px; border-radius: 50%; border: 3px solid #b08d6c; margin: 1rem 0;">
-        <p><strong>Player:</strong> ${member.playerName}</p>
         <p><strong>Class:</strong> ${member.class}</p>
         <p><strong>Level:</strong> ${member.level}</p>
         
-        <h3 style="color: #e6007e; margin-top: 2rem;">Spells & Abilities</h3>
-        <ul style="list-style: none; padding: 0;">
-            ${member.spells.map(spell => `<li style="background: rgba(230, 0, 126, 0.1); margin: 0.5rem 0; padding: 0.5rem; border-radius: 5px; border-left: 3px solid #e6007e;">${spell}</li>`).join('')}
-        </ul>
-        
-        <h3 style="color: #e6007e; margin-top: 2rem;">Magical Items</h3>
-        <ul style="list-style: none; padding: 0;">
-            ${member.magicalItems.map(item => `<li style="background: rgba(230, 0, 126, 0.1); margin: 0.5rem 0; padding: 0.5rem; border-radius: 5px; border-left: 3px solid #e6007e;">${item}</li>`).join('')}
-        </ul>
+        <p style="color: #e6007e; margin-top: 2rem; font-style: italic;">
+            Character details can be viewed in D&D Beyond or your character sheet.
+        </p>
     `;
     
     modal.style.display = 'block';
