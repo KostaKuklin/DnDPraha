@@ -27,6 +27,9 @@ body {
     width: 100%;
     z-index: 1000;
     border-bottom: 3px solid #8e004d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .nav-brand {
@@ -37,36 +40,93 @@ body {
     letter-spacing: -0.02em;
 }
 
+.burger-menu {
+    position: relative;
+}
+
+.burger-icon {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.burger-icon span {
+    width: 25px;
+    height: 3px;
+    background: #ffffff;
+    margin: 3px 0;
+    transition: all 0.3s ease;
+    border: 1px solid #000000;
+}
+
+.burger-icon:hover span {
+    background: #e6007e;
+}
+
+.burger-menu.active .burger-icon span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.burger-menu.active .burger-icon span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-menu.active .burger-icon span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
 .nav-menu {
     list-style: none;
-    display: flex;
-    gap: 3rem;
-    margin-top: 2rem;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #4a4a52;
+    border: 3px solid #000000;
+    box-shadow: 6px 6px 0px #8e004d, 0 0 15px rgba(230, 0, 126, 0.2);
+    min-width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 1001;
+}
+
+.burger-menu.active .nav-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
 }
 
 .nav-link {
     color: #ffffff;
     text-decoration: none;
-    padding: 0.5rem 0;
+    padding: 1rem 1.5rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     font-size: 0.9rem;
     transition: all 0.3s ease;
     position: relative;
+    display: block;
+    border-bottom: 1px solid #8e004d;
+}
+
+.nav-link:last-child {
+    border-bottom: none;
 }
 
 .nav-link:hover {
     color: #e6007e;
-    transform: translateY(-2px);
+    background: #8e004d;
+    transform: translateX(5px);
     text-shadow: 0 0 10px rgba(230, 0, 126, 0.5);
 }
 
 .nav-link.active {
     color: #ffffff;
     background: #e6007e;
-    padding: 0.5rem 1rem;
-    margin: -0.5rem -1rem;
     border: 2px solid #e6007e;
 }
 
@@ -557,9 +617,22 @@ body {
         padding: 1.5rem;
     }
     
+    .nav-brand {
+        font-size: 1.5rem;
+    }
+    
+    .burger-icon span {
+        width: 20px;
+        height: 2px;
+    }
+    
     .nav-menu {
-        flex-direction: column;
-        gap: 1rem;
+        min-width: 180px;
+    }
+    
+    .nav-link {
+        padding: 0.8rem 1rem;
+        font-size: 0.8rem;
     }
     
     .hero-title {

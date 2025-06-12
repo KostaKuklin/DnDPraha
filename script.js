@@ -2,6 +2,8 @@
 document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelectorAll('.nav-link');
     const pages = document.querySelectorAll('.page');
+    const burgerMenu = document.querySelector('.burger-menu');
+    const burgerIcon = document.querySelector('.burger-icon');
 
     // Function to show a specific page
     function showPage(pageId) {
@@ -19,7 +21,23 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Scroll to top of the page
         window.scrollTo(0, 0);
+        
+        // Close burger menu after navigation
+        burgerMenu.classList.remove('active');
     }
+
+    // Toggle burger menu
+    burgerIcon.addEventListener('click', function(e) {
+        e.stopPropagation();
+        burgerMenu.classList.toggle('active');
+    });
+
+    // Close burger menu when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!burgerMenu.contains(e.target)) {
+            burgerMenu.classList.remove('active');
+        }
+    });
 
     // Handle navigation clicks
     navLinks.forEach(link => {
