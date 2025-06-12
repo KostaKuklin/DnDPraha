@@ -198,9 +198,11 @@ function showNPCDetails(npc) {
     content.innerHTML = `
         <h2>${npc.name}</h2>
         <img src="${npc.image}" alt="${npc.name}" style="width: 100%; max-width: 300px; border-radius: 10px; margin: 1rem 0;">
-        <p><strong>Role:</strong> ${npc.role}</p>
-        <p><strong>Location:</strong> ${npc.location}</p>
-        <p><strong>Description:</strong></p>
+        <p><strong>Role:</strong></p>
+        <p>${npc.role}</p>
+        <p><strong>Lokace:</strong></p>
+        <p>${npc.location}</p>
+        <p><strong>Popis:</strong></p>
         <p>${npc.description}</p>
     `;
     
