@@ -33,6 +33,7 @@ function initializeApp() {
     loadRules();
     loadParty();
     setupModals();
+    setupAdminField(); // Add admin field functionality
 }
 
 // Countdown timer functionality
@@ -346,4 +347,165 @@ function addScrollAnimations() {
 }
 
 // Initialize scroll animations when page loads
-window.addEventListener('load', addScrollAnimations); 
+window.addEventListener('load', addScrollAnimations);
+
+// Admin field functionality for static version
+function setupAdminField() {
+    const adminField = document.getElementById('admin-field');
+    let isAdminMode = false;
+
+    adminField.addEventListener('input', function() {
+        if (this.value.toLowerCase() === 'admin') {
+            isAdminMode = true;
+            this.style.opacity = '1';
+            this.style.borderColor = '#e6007e';
+            this.style.color = '#e6007e';
+            enableAdminMode();
+        } else {
+            isAdminMode = false;
+            this.style.opacity = '0.3';
+            this.style.borderColor = '#e6007e';
+            this.style.color = '#e6007e';
+            disableAdminMode();
+        }
+    });
+
+    // Clear field on focus for better UX
+    adminField.addEventListener('focus', function() {
+        if (this.value === 'admin') {
+            this.select();
+        }
+    });
+}
+
+function enableAdminMode() {
+    // Add edit buttons to existing elements
+    addEditButtons();
+    
+    // Add "Add New" buttons to page headers
+    addNewButtons();
+    
+    // Add edit session button
+    addEditSessionButton();
+    
+    // Show admin field more prominently
+    document.getElementById('admin-field').style.opacity = '1';
+}
+
+function disableAdminMode() {
+    // Remove all admin buttons
+    document.querySelectorAll('.admin-button').forEach(btn => btn.remove());
+    
+    // Hide admin field
+    document.getElementById('admin-field').style.opacity = '0.3';
+}
+
+function addEditButtons() {
+    // Add edit buttons to NPC cards
+    document.querySelectorAll('.npc-card').forEach(card => {
+        if (!card.querySelector('.edit-item-btn')) {
+            const npcId = card.querySelector('.npc-name').textContent;
+            const editBtn = document.createElement('button');
+            editBtn.className = 'admin-button edit-item-btn';
+            editBtn.textContent = 'Edit NPC';
+            editBtn.style.marginTop = '1rem';
+            editBtn.onclick = (e) => {
+                e.stopPropagation();
+                showEditModal('npc', npcId);
+            };
+            card.appendChild(editBtn);
+        }
+    });
+
+    // Add edit buttons to rule items
+    document.querySelectorAll('.rule-item').forEach(item => {
+        if (!item.querySelector('.edit-item-btn')) {
+            const ruleTitle = item.querySelector('.rule-title').textContent;
+            const editBtn = document.createElement('button');
+            editBtn.className = 'admin-button edit-item-btn';
+            editBtn.textContent = 'Edit Rule';
+            editBtn.style.marginTop = '1rem';
+            editBtn.onclick = (e) => {
+                e.stopPropagation();
+                showEditModal('rule', ruleTitle);
+            };
+            item.appendChild(editBtn);
+        }
+    });
+
+    // Add edit buttons to party cards
+    document.querySelectorAll('.party-card').forEach(card => {
+        if (!card.querySelector('.edit-item-btn')) {
+            const charName = card.querySelector('.party-name').textContent;
+            const editBtn = document.createElement('button');
+            editBtn.className = 'admin-button edit-item-btn';
+            editBtn.textContent = 'Edit Member';
+            editBtn.style.marginTop = '1rem';
+            editBtn.onclick = (e) => {
+                e.stopPropagation();
+                showEditModal('party', charName);
+            };
+            card.appendChild(editBtn);
+        }
+    });
+}
+
+function addNewButtons() {
+    // Add "Add New NPC" button
+    const npcsHeader = document.querySelector('#npcs h1');
+    if (!npcsHeader.querySelector('#add-npc-btn')) {
+        const addBtn = document.createElement('button');
+        addBtn.id = 'add-npc-btn';
+        addBtn.className = 'admin-button';
+        addBtn.textContent = 'Add New NPC';
+        addBtn.style.marginLeft = '1rem';
+        addBtn.onclick = () => showEditModal('npc', 'new');
+        npcsHeader.appendChild(addBtn);
+    }
+
+    // Add "Add New Rule" button
+    const rulesHeader = document.querySelector('#rules h1');
+    if (!rulesHeader.querySelector('#add-rule-btn')) {
+        const addBtn = document.createElement('button');
+        addBtn.id = 'add-rule-btn';
+        addBtn.className = 'admin-button';
+        addBtn.textContent = 'Add New Rule';
+        addBtn.style.marginLeft = '1rem';
+        addBtn.onclick = () => showEditModal('rule', 'new');
+        rulesHeader.appendChild(addBtn);
+    }
+
+    // Add "Add New Party Member" button
+    const partyHeader = document.querySelector('#party h1');
+    if (!partyHeader.querySelector('#add-party-btn')) {
+        const addBtn = document.createElement('button');
+        addBtn.id = 'add-party-btn';
+        addBtn.className = 'admin-button';
+        addBtn.textContent = 'Add New Member';
+        addBtn.style.marginLeft = '1rem';
+        addBtn.onclick = () => showEditModal('party', 'new');
+        partyHeader.appendChild(addBtn);
+    }
+}
+
+function addEditSessionButton() {
+    const nextSessionCard = document.querySelector('.next-session-card');
+    if (!nextSessionCard.querySelector('#edit-session-btn')) {
+        const editBtn = document.createElement('button');
+        editBtn.id = 'edit-session-btn';
+        editBtn.className = 'admin-button';
+        editBtn.textContent = 'Edit Session Info';
+        editBtn.style.marginTop = '2rem';
+        editBtn.onclick = () => showEditModal('session', 'edit');
+        nextSessionCard.appendChild(editBtn);
+    }
+}
+
+function showEditModal(type, identifier) {
+    // For static version, show a simple alert
+    if (type === 'session') {
+        alert('Session editing is available in the local Flask version. For the static version, edit session_info.json directly.');
+    } else {
+        alert(`${type.toUpperCase()} editing is available in the local Flask version. For the static version, edit ${type}.json directly.`);
+    }
+} 
