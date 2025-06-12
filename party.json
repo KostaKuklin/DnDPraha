@@ -18,7 +18,7 @@
         "characterName": "Noxx",
         "class": "Barbarian",
         "level": 1,
-        "portrait": "images/Noxx.jpg"
+        "portrait": "images/noxx.jpg"
     },
     {
         "id": 4,
@@ -32,7 +32,7 @@
         "characterName": "Solanne",
         "class": "Cleric",
         "level": 3,
-        "portrait": "images/Solanne.jpg"
+        "portrait": "images/solanne.jpg"
     },
     {
         "id": 6,
