@@ -3,27 +3,57 @@ document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelectorAll('.nav-link');
     const pages = document.querySelectorAll('.page');
 
+    // Function to show a specific page
+    function showPage(pageId) {
+        // Update active nav link
+        navLinks.forEach(l => l.classList.remove('active'));
+        document.querySelector(`[href="#${pageId}"]`).classList.add('active');
+        
+        // Show target page
+        pages.forEach(page => {
+            page.classList.remove('active');
+            if (page.id === pageId) {
+                page.classList.add('active');
+            }
+        });
+    }
+
+    // Handle navigation clicks
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
             const targetId = this.getAttribute('href').substring(1);
+            showPage(targetId);
             
-            // Update active nav link
-            navLinks.forEach(l => l.classList.remove('active'));
-            this.classList.add('active');
-            
-            // Show target page
-            pages.forEach(page => {
-                page.classList.remove('active');
-                if (page.id === targetId) {
-                    page.classList.add('active');
-                }
-            });
+            // Update URL hash
+            window.location.hash = targetId;
         });
+    });
+
+    // Handle initial page load and browser back/forward
+    function handleInitialLoad() {
+        const hash = window.location.hash.substring(1);
+        if (hash && document.getElementById(hash)) {
+            showPage(hash);
+        } else {
+            // Default to landing page if no valid hash
+            showPage('landing');
+        }
+    }
+
+    // Handle browser back/forward buttons
+    window.addEventListener('hashchange', function() {
+        const hash = window.location.hash.substring(1);
+        if (hash && document.getElementById(hash)) {
+            showPage(hash);
+        }
     });
 
     // Initialize the app
     initializeApp();
+    
+    // Handle initial page load
+    handleInitialLoad();
 });
 
 // Initialize all app functionality
