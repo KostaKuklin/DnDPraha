@@ -16,13 +16,6 @@
             <li><a href="#map" class="nav-link">MAP</a></li>
             <li><a href="#party" class="nav-link">PARTY</a></li>
         </ul>
-        <div class="login-container">
-            <input type="text" id="username" placeholder="Username" class="login-input">
-            <input type="password" id="password" placeholder="Password" class="login-input">
-            <button id="login-btn" class="login-button">Login</button>
-            <button id="logout-btn" class="login-button" style="display: none;">Logout</button>
-            <span id="welcome-message" class="welcome-message" style="display: none;"></span>
-        </div>
     </nav>
 
     <main class="main-content">
@@ -60,14 +53,13 @@
                             <span class="countdown-label">SECONDS</span>
                         </div>
                     </div>
-                    <button id="edit-session-btn" class="admin-button" style="display: none;">Edit Session Info</button>
                 </div>
             </div>
         </section>
 
         <!-- NPCs Page -->
         <section id="npcs" class="page">
-            <h1>NPCS <button id="add-npc-btn" class="admin-button" style="display: none;">Add New NPC</button></h1>
+            <h1>NPCS</h1>
             <div class="npcs-grid" id="npcs-container">
                 <!-- NPCs will be populated by JavaScript -->
             </div>
@@ -75,7 +67,7 @@
 
         <!-- Rules Page -->
         <section id="rules" class="page">
-            <h1>RULES REFERENCE <button id="add-rule-btn" class="admin-button" style="display: none;">Add New Rule</button></h1>
+            <h1>RULES REFERENCE</h1>
             <div class="rules-filters">
                 <button class="filter-btn active" data-filter="all">ALL</button>
                 <button class="filter-btn" data-filter="movement">MOVEMENT</button>
@@ -104,7 +96,7 @@
 
         <!-- Party Page -->
         <section id="party" class="page">
-            <h1>PARTY MEMBERS <button id="add-party-btn" class="admin-button" style="display: none;">Add New Party Member</button></h1>
+            <h1>PARTY MEMBERS</h1>
             <div class="party-grid" id="party-container">
                 <!-- Party members will be populated by JavaScript -->
             </div>
