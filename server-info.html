@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D&D Campaign Manager - Local Server</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: #e8e8e8;
+            margin: 0;
+            padding: 2rem;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 2px solid #ffd700;
+            border-radius: 15px;
+            padding: 3rem;
+            text-align: center;
+            max-width: 600px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        h1 {
+            color: #ffd700;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+        }
+        .status {
+            background: rgba(0, 255, 0, 0.2);
+            color: #90EE90;
+            padding: 1rem;
+            border-radius: 10px;
+            margin: 1rem 0;
+            border: 1px solid #90EE90;
+        }
+        .link {
+            display: inline-block;
+            background: #ffd700;
+            color: #1a1a2e;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: bold;
+            margin: 1rem;
+            transition: all 0.3s ease;
+        }
+        .link:hover {
+            background: #ffed4e;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+        }
+        .info {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            border-radius: 10px;
+            margin: 1rem 0;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎲 D&D Campaign Manager</h1>
+        <div class="status">
+            ✅ Local Server Running Successfully!
+        </div>
+        
+        <p>Your D&D Campaign Manager is now running locally.</p>
+        
+        <a href="index.html" class="link">🚀 Launch D&D App</a>
+        
+        <div class="info">
+            <h3>📋 Server Information:</h3>
+            <ul>
+                <li><strong>URL:</strong> <a href="http://localhost:8000" style="color: #ffd700;">http://localhost:8000</a></li>
+                <li><strong>Main App:</strong> <a href="index.html" style="color: #ffd700;">index.html</a></li>
+                <li><strong>Port:</strong> 8000</li>
+                <li><strong>Status:</strong> Active</li>
+            </ul>
+        </div>
+        
+        <div class="info">
+            <h3>🔧 How to Stop the Server:</h3>
+            <p>Press <strong>Ctrl+C</strong> in the terminal/command prompt where the server is running.</p>
+        </div>
+        
+        <div class="info">
+            <h3>📱 Testing:</h3>
+            <p>You can test the app on different devices by accessing:</p>
+            <p><code>http://YOUR_COMPUTER_IP:8000</code></p>
+            <p>Replace YOUR_COMPUTER_IP with your actual IP address.</p>
+        </div>
+    </div>
+</body>
+</html> 

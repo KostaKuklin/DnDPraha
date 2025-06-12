@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "playerName": "Alex",
+        "characterName": "Thorin Ironfist",
+        "class": "Fighter",
+        "level": 5,
+        "portrait": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face",
+        "spells": ["Second Wind", "Action Surge", "Extra Attack"],
+        "magicalItems": ["+1 Longsword", "Ring of Protection", "Potion of Healing"]
+    },
+    {
+        "id": 2,
+        "playerName": "Sarah",
+        "characterName": "Lyra Moonwhisper",
+        "class": "Wizard",
+        "level": 5,
+        "portrait": "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=200&h=200&fit=crop&crop=face",
+        "spells": ["Fireball", "Magic Missile", "Shield", "Mage Armor", "Detect Magic"],
+        "magicalItems": ["Staff of the Magi", "Ring of Spell Storing", "Scroll of Invisibility"]
+    },
+    {
+        "id": 3,
+        "playerName": "Mike",
+        "characterName": "Grok the Mighty",
+        "class": "Barbarian",
+        "level": 5,
+        "portrait": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop&crop=face",
+        "spells": ["Rage", "Reckless Attack", "Danger Sense"],
+        "magicalItems": ["+1 Greataxe", "Belt of Giant Strength", "Cloak of Protection"]
+    },
+    {
+        "id": 4,
+        "playerName": "Emma",
+        "characterName": "Sister Mercy",
+        "class": "Cleric",
+        "level": 5,
+        "portrait": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop&crop=face",
+        "spells": ["Cure Wounds", "Bless", "Guiding Bolt", "Spiritual Weapon", "Lesser Restoration"],
+        "magicalItems": ["Holy Symbol", "Potion of Greater Healing", "Scroll of Revivify"]
+    }
+] 

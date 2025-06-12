@@ -1,0 +1,42 @@
+[
+    {
+        "title": "Movement",
+        "content": "On your turn, you can move a distance up to your speed. You can use as much or as little of your speed as you like on your turn, following the rules here.",
+        "tags": ["movement"]
+    },
+    {
+        "title": "Attack of Opportunity",
+        "content": "You can make an opportunity attack when a hostile creature that you can see moves out of your reach. To make the opportunity attack, you use your reaction to make one melee attack against the provoking creature.",
+        "tags": ["combat", "movement"]
+    },
+    {
+        "title": "Spellcasting",
+        "content": "Spellcasting is the ability to cast spells. To cast a spell, you must have a spell slot available of the spell's level or higher.",
+        "tags": ["spellcasting", "spell"]
+    },
+    {
+        "title": "Concentration",
+        "content": "Some spells require you to maintain concentration in order to keep their magic active. If you lose concentration, such a spell ends.",
+        "tags": ["spellcasting", "spell"]
+    },
+    {
+        "title": "Saving Throws",
+        "content": "A saving throw is a roll to avoid or reduce the effects of certain spells, traps, poisons, diseases, and similar effects.",
+        "tags": ["saving-throws"]
+    },
+    {
+        "title": "Prone",
+        "content": "A prone creature's only movement option is to crawl, unless it stands up and thereby ends the condition. The creature has disadvantage on attack rolls.",
+        "tags": ["conditions", "movement"]
+    },
+    {
+        "title": "Grappled",
+        "content": "A grappled creature's speed becomes 0, and it can't benefit from any bonus to its speed. The condition ends if the grappler is incapacitated.",
+        "tags": ["conditions", "movement"]
+    },
+    {
+        "title": "Incapacitated",
+        "content": "An incapacitated creature can't take actions or reactions. It can still move and speak, but it can't take any other actions.",
+        "tags": ["conditions"]
+    }
+] 
