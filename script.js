@@ -91,6 +91,7 @@ function initializeApp() {
     loadRules();
     loadParty();
     setupModals();
+    setupKofiParticles();
 }
 
 // Countdown timer functionality
@@ -370,5 +371,71 @@ function setupModals() {
                 modal.style.display = 'none';
             }
         });
+    });
+}
+
+// Kofi image particle animation
+function setupKofiParticles() {
+    const kofiImage = document.querySelector('.kofi-image');
+    const particlesContainer = document.getElementById('particles-container');
+    
+    if (!kofiImage || !particlesContainer) return;
+    
+    // Wait for the kofi image animation to complete (4 seconds total: 1s delay + 3s animation)
+    setTimeout(() => {
+        startContinuousHeartParticles();
+    }, 4000);
+}
+
+function startContinuousHeartParticles() {
+    const particlesContainer = document.getElementById('particles-container');
+    const kofiImage = document.querySelector('.kofi-image');
+    
+    if (!particlesContainer || !kofiImage) return;
+    
+    // Spawn hearts continuously every 0.5 seconds
+    setInterval(() => {
+        createHeartParticle();
+    }, 500);
+}
+
+function createHeartParticle() {
+    const particlesContainer = document.getElementById('particles-container');
+    const kofiImage = document.querySelector('.kofi-image');
+    
+    if (!particlesContainer || !kofiImage) return;
+    
+    // Get kofi image position and size
+    const kofiRect = kofiImage.getBoundingClientRect();
+    const containerRect = particlesContainer.getBoundingClientRect();
+    
+    // Create single heart particle
+    const particle = document.createElement('div');
+    particle.className = 'heart-particle';
+    particle.textContent = '❤️';
+    
+    // Random position around the kofi image
+    const x = kofiRect.left - containerRect.left + Math.random() * kofiRect.width;
+    const y = kofiRect.top - containerRect.top + Math.random() * kofiRect.height;
+    
+    particle.style.left = x + 'px';
+    particle.style.top = y + 'px';
+    
+    particlesContainer.appendChild(particle);
+    
+    // Animate particle using Anime.js - continuous rising only
+    anime({
+        targets: particle,
+        scale: [0, 1],
+        opacity: [0, 1, 0],
+        translateY: -400, // Continuous upward movement only
+        duration: 4000,
+        easing: 'easeOutQuad',
+        complete: function() {
+            // Remove particle after animation
+            if (particle.parentNode) {
+                particle.parentNode.removeChild(particle);
+            }
+        }
     });
 } 
