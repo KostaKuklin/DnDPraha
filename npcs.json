@@ -1,24 +1,24 @@
 [
     {
         "id": 1,
-        "name": "Lain \"Sedmi\u010dka\" Verre",
-        "description": "Kapit\u00e1nka Letn\u00edho V\u00e1nku, kter\u00e9 pomohli na cest\u011b do Suzailu. Unesena kultem Utopen\u00e9ho Boha.",
+        "name": "Lain \"Sedmička\" Verre",
+        "description": "Kapitánka Letního Vánku, které pomohli na cestě do Suzailu. Unesena kultem Utoneného Boha.",
         "image": "https://i.pinimg.com/736x/d8/9d/4f/d89d4fa6e3f984fa0481469b014cc173.jpg",
-        "role": "Kapit\u00e1nka",
+        "role": "Kapitánka",
         "location": "Suzail"
     },
     {
         "id": 2,
         "name": "Malthus",
-        "description": "Nebezpe\u010dn\u00fd \u010dernokn\u011b\u017en\u00edk Utopen\u00e9ho Boha, byl pora\u017een partou v katakombach pod Suzailem.",
+        "description": "Nebezpečný černokněžník Utoneného Boha, byl poražen partou v katakombach pod Suzailem.",
         "image": "https://i.pinimg.com/736x/13/f4/70/13f470d3138a73bbf41c883475354807.jpg",
-        "role": "V\u016fdce kultist\u016f",
+        "role": "Vůdce kultistů",
         "location": "Suzail"
     },
     {
         "id": 3,
         "name": "Bloody Flint",
-        "description": "Pir\u00e1tsk\u00fd kapit\u00e1n. On a jeho pos\u00e1dka byli prvn\u00ed hrozbou se kterou se parta utk\u00e1la. Jeho hlava je moment\u00e1ln\u011b v k\u00fdblu na jedne z slu\u017eeben Fialov\u00fdch Draku.",
+        "description": "Pirátský kapitán. On a jeho posádka byli první hrozbou se kterou se parta utkala. Jeho hlava je momentálně v kýblu na jedne z služen Fialových Draku.",
         "image": "https://i.pinimg.com/736x/22/91/60/2291603e339ad1a7196e49029e4b3f6c.jpg",
         "role": "Pirat",
         "location": "The Dragonmere"
@@ -26,41 +26,89 @@
     {
         "id": 4,
         "name": "Felix",
-        "description": "D\u016fstojn\u00edk jen\u017e u\u017e v\u00edcekr\u00e1t pom\u00e1hal part\u011b v boj\u00ed. Urgoval je pomoci kapit\u00e1nce.",
+        "description": "Důstojník jenž už vícekrát pomáhal partě v bojích. Urgoval je pomoci kapitánce.",
         "image": "https://i.pinimg.com/736x/f0/4b/a5/f04ba55d1935d44020a634ca0a863193.jpg",
-        "role": "D\u016fstojn\u00edk pod kapit\u00e1nkou Verre",
+        "role": "Důstojník pod kapitánkou Verre",
         "location": "The Dragonmere"
     },
     {
         "name": "Clint",
-        "description": "Dal\u0161\u00ed z d\u016fstojn\u00edku kapit\u00e1nky Verre, utrp\u011bl v\u00e1\u017en\u00e1 zran\u011bn\u00ed b\u011bhem cesty do Suzailu, moment\u00e1ln\u011b je v p\u00e9\u010di chr\u00e1mu Pel\u00f3ra.",
+        "description": "Další z důstojníků kapitánky Verre, utrpěl vážná zranění během cesty do Suzailu, momentálně je v péči chrámu Pelóra.",
         "image": "https://i.pinimg.com/736x/17/f3/e6/17f3e621a47f36a1ba6492dc6cb92698.jpg",
-        "role": "D\u016fstojn\u00edk",
+        "role": "Důstojník",
         "location": "Suzail",
         "id": 5
     },
     {
         "name": "Paulie",
-        "description": "\u010ci\u0161nice s ni\u017e m\u011bla parta minimum interakc\u00ed.",
+        "description": "Číšnice s níž měla parta minimum interakcí.",
         "image": "https://i.pinimg.com/736x/7b/0f/bf/7b0fbf9c186678d7595821eb69d42d63.jpg",
-        "role": "Serv\u00edrka",
-        "location": "Suzail - Hospoda u Zelen\u00e9ho Hada",
+        "role": "Servírka",
+        "location": "Suzail - Hospoda u Zeleného Hada",
         "id": 6
     },
     {
         "name": "Welt",
-        "description": "Hostinsk\u00fd kter\u00fd nechod\u00ed pro r\u00e1nu daleko a ner\u00e1d se dlouze vykec\u00e1va. V\u011bcn\u00fd a svi\u017en\u00fd - velmi mlad\u00fd s ohledem na jeho pozici.",
+        "description": "Hostinský který nechodí pro ránu daleko a nerád se dlouze vykecává. Věcný a svížený - velmi mladý s ohledem na jeho pozici.",
         "image": "https://i.pinimg.com/736x/87/ca/2c/87ca2c93f86846dc35b4f99f4c66316e.jpg",
         "role": "Majitel hostince",
-        "location": "Suzail - Hospoda u Zelen\u00e9ho Hada",
+        "location": "Suzail - Hospoda u Zeleného Hada",
         "id": 7
     },
     {
-        "name": "\"Kuch\u00e1\u0159\"",
-        "description": "Parta nezn\u00e1 jeho jm\u00e9no, pouze v\u00ed, \u017ee docela dob\u0159e va\u0159\u00ed.",
+        "name": "\"Kuchař\"",
+        "description": "Parta nezná jeho jméno, pouze ví, že docela dobře vaří.",
         "image": "https://i.pinimg.com/736x/df/35/76/df35760dae0324bbc3136459653337dc.jpg",
-        "role": "Kuch\u00e1\u0159",
-        "location": "Suzail - Hospoda u Zelen\u00e9ho Hada",
+        "role": "Kuchař",
+        "location": "Suzail - Hospoda u Zeleného Hada",
         "id": 8
+    },
+    {
+        "name": "Berhart",
+        "description": "Kovář kterého potkal Roderick v Suzailu. Ferový obchodník a znalec zbraní (i těch exotických).",
+        "image": "images/Berhart.png",
+        "role": "Kovář/Obchodník",
+        "location": "Suzail",
+        "id": 9
+    },
+    {
+        "name": "Prodejce hudebních nástrojů",
+        "description": "Majitel obchodu u Tří Strun. Gnom který miluje hudbu, peníze a gambling.",
+        "image": "images/instrumentseller.png",
+        "role": "Obchodník",
+        "location": "Suzail",
+        "id": 10
+    },
+    {
+        "name": "Pouliční muzikant",
+        "description": "Bard kterého potkal Bootsy v ulicích Suzailu. Splašený, ale velice talentovaný.",
+        "image": "images/elvenbard.jpg",
+        "role": "Pouliční muzikant",
+        "location": "Suzail",
+        "id": 11
+    },
+    {
+        "name": "Delloin",
+        "description": "Kapitán přistavní jednotky Fialových Draků. Převzal pro prozkoumání případné odměny hlavu Bloody Flinta.",
+        "image": "images/Delloin.png",
+        "role": "Kapitán Fialových Draků",
+        "location": "Suzail, přístav.",
+        "id": 12
+    },
+    {
+        "name": "Draven",
+        "description": "Jeden ze stražných kultu Utopeného Boha. Byl zabit Roderickem poté co složil zbraně a modlil o život.",
+        "image": "images/Draven.png",
+        "role": "Strážný kultu",
+        "location": "Suzail, katakomby.",
+        "id": 13
+    },
+    {
+        "name": "Selmar",
+        "description": "Kněz řádu Valkura. Pomohl partě zjistit polohu kultu Utopeného Boha a kapitánky Lain.",
+        "image": "images/Selmar.png",
+        "role": "Kněz",
+        "location": "Suzail.",
+        "id": 14
     }
 ]
