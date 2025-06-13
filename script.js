@@ -19,6 +19,13 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
         
+        // Handle landing page scrolling prevention
+        if (pageId === 'landing') {
+            document.body.classList.add('landing-active');
+        } else {
+            document.body.classList.remove('landing-active');
+        }
+        
         // Scroll to top of the page
         window.scrollTo(0, 0);
         
